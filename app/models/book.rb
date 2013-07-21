@@ -3,7 +3,7 @@ class Book < ActiveRecord::Base
 
   mount_uploader :photo, PhotoUploader
 
-  attr_accessible :categorie, :description, :isbn, :photo, :price, :title
+  attr_accessible :categorie, :description, :isbn, :photo, :price, :title, :user_id
 
 
 end

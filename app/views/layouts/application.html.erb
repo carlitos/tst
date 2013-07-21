@@ -46,22 +46,21 @@
           </a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <%= image_tag "logo.png", :class => "brand" %>
+              <%= link_to root_path do %>
+                <%= image_tag "logo.png", :class => "brand" %>
+              <% end%>
             </ul>
 
 
             <p class="navbar-text pull-right">
               <ul>
               <% if current_user  %>
-                <li><%= link_to('My Books', user_books_path(current_user), :class => "navbar-link")  %>  </li>  
+                <li><%= link_to('My Books', books_path(current_user), :class => "navbar-link")  %>  </li>
                 <li><%= link_to('Logout', destroy_user_session_path,  :method => :delete, :class => "navbar-link")  %>  </li>
               <% else %>
                   <li><%= link_to('Login', new_user_session_path, :class => "navbar-link")  %>  </li>
                   <li><%= link_to('Sign up', new_user_registration_path, :class => "navbar-link")  %>  </li>
               <% end %>
-
-
-
             </ul>
             </p>
 
@@ -75,7 +74,7 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
-          
+
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>
