@@ -10,6 +10,8 @@ gem 'devise'
 gem 'thin'
 gem 'carrierwave'
 
+gem 'mini_magick'
+
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 # Gems used only for assets and not required

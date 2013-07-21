@@ -11,3 +11,45 @@
  *= require_self
  *= require_tree .
  */
+/*
+	.books {
+	  list-style: none;
+	}
+
+	.thumb {
+	  float: left;
+	  padding-bottom: 1em;
+	  height: 100px;
+	  width: 100px;
+	}
+
+	.books li {
+	  clear: both;
+	  padding-top: 15px;
+	  min-height: 100px;
+	}
+
+	.books img{
+	  height: 100px;
+	}
+
+	.price{
+	  float: right;
+	  font-size: 18px;
+	  color: #1c1c1c;
+	  padding-left: 15px;
+	  padding-right: 15px;
+	}
+
+	.title{
+	  text-decoration:none;
+	  color: #1c1c1c;
+	  font-weight: bold;
+	}
+
+	.book-details{
+	  padding-top: 15px;
+	  color: #1c1c1c;
+	  font-weight: bold;
+	}
+*/

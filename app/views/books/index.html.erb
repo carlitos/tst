@@ -1,27 +1,24 @@
 <%- model_class = Book -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+  <h1>Sell your Books</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:isbn) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:photo) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:price) %></th>
       <th><%= model_class.human_attribute_name(:categorie) %></th>
-      </th>
     </tr>
   </thead>
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><%= link_to book.id, '' %></td>
         <td><%= book.isbn %></td>
         <td><%= book.title %></td>
-        <td><%= book.photo %></td>
+        <td><%= image_tag book.photo.url(:thumb),width: "100px" %></td>
         <td><%= book.description %></td>
         <td><%= book.price %></td>
         <td><%= book.categorie %></td>
