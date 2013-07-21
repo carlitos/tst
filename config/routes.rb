@@ -1,14 +1,21 @@
 BookBank::Application.routes.draw do
   resources :categories
-
-
-  resources :books
-
-
+  
   devise_for :users
 
+  resources :users do
+    resources :books  
+  end
+  
+  #resources :comments, only: [:show, :edit, :update, :destroy]
+
+  resources :books, only: [:show, :index]
+
+  
+
   get "home/index"
-  root :to => "home#index"
+  root :to => "books#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
