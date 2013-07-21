@@ -3,7 +3,7 @@ BookBank::Application.routes.draw do
   
   devise_for :users
 
-  resources :users do
+  scope 'users/:user_id', module: :users do
     resources :books  
   end
   
@@ -11,11 +11,7 @@ BookBank::Application.routes.draw do
 
   resources :books, only: [:show, :index]
 
-  
-
-  get "home/index"
   root :to => "books#index"
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

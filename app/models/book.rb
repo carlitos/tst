@@ -1,5 +1,5 @@
 class Book < ActiveRecord::Base
-  belongs_to :user_id
+  belongs_to :user
 
   mount_uploader :photo, PhotoUploader
 

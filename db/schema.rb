@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20130721032137) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "books", ["user_id"], :name => "index_books_on_user_id_id"
+  add_index "books", ["user_id"], :name => "index_books_on_user_id"
 
   create_table "categories", :force => true do |t|
     t.string   "title"

@@ -31,20 +31,8 @@
     </div>
   </div>
   
-  <!-- <div class="control-group">
-    <%#= f.label :categorie_id, :class => 'control-label' %>
-    <div class="controls">
-      <%#= f.collection_select :categorie_id, Categorie.all, :id, :title, prompt: "Select a Category" %>
-    </div>
-  </div> -->
-
-  <div class="control-group">
-    <%= f.label :user_id_id, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.number_field :user_id_id, :class => 'number_field' %>
-    </div>
-  </div>
-
+  <%= f.hidden_field :user_id, :class => 'number_field' %>
+  
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
